@@ -137,8 +137,38 @@ class HomePage extends StatelessWidget {
                 color: Colors.grey,
               thickness: 0.5,
               height: 50.0, 
-            ),]
               ),
+            ],
+            ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                 children:[
+                  const Text("Description",
+                    style: TextStyle(fontSize: 22.0),
+                  ),
+                  const SizedBox(height: 20.0),
+                    RichText(
+                    text: const TextSpan(
+                      style: TextStyle(fontSize: 14.0, color: Colors.black, height: 1.8),
+                      children: [
+                        TextSpan(
+                          text: "A capuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo..",
+                        ),
+                        //    WidgetSpan(
+                        //   child: SizedBox(width: 5.0),
+                        // ),
+                        TextSpan(
+                          text: "Read more",
+                          style: TextStyle(fontSize: 18.0, color: Colors.brown, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+            ],
+            ),
             )
           ],
         ),
