@@ -41,8 +41,6 @@ class HomePage extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/arrow-left.jpg',
-                    width: 30.0,
-                    height: 30.0,
                   ),
                   const SizedBox(width: 30.0),
                   const Expanded(
@@ -57,8 +55,6 @@ class HomePage extends StatelessWidget {
                   const SizedBox(width: 30.0),
                   Image.asset(
                     'images/Heart.jpg',
-                    width: 30.0,
-                    height: 30.0,
                   ),
                 ],
               ),
@@ -68,7 +64,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.9,
               child: Image.asset(
@@ -98,6 +94,51 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ]
+            ),
+            const SizedBox(height: 20.0),
+             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Row(
+                    children: [
+                      Icon(Icons.star, size: 30.0, color: Colors.yellow),
+                      Text(
+                        "4.8",
+                        style: TextStyle(fontSize: 20.0),
+                        ),
+                       Text(
+                        "(230)",
+                        style: TextStyle(fontSize: 14.0),
+                        ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                         Image.asset(
+                        'images/bean.jpg',
+                      ),
+                      const SizedBox(width: 10.0),
+                      Image.asset(
+                        'images/milk.jpg',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                 children:[
+                  Divider(
+                color: Colors.grey,
+              thickness: 0.5,
+              height: 50.0, 
+            ),]
+              ),
             )
           ],
         ),
