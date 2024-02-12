@@ -70,6 +70,7 @@ flutter:
       - images/Image_project.png
       - images/milk.jpg
       - images/Rectangle 1706.jpg
+      - images/FLUTTER IMAGES.PNG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -96,3 +97,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Sora,
+      fonts:
+        - asset: fonts/Sora-VariableFont_wght.ttf
