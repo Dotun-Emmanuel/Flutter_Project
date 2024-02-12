@@ -157,9 +157,6 @@ class HomePage extends StatelessWidget {
                         TextSpan(
                           text: "A capuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo..",
                         ),
-                        //    WidgetSpan(
-                        //   child: SizedBox(width: 5.0),
-                        // ),
                         TextSpan(
                           text: "Read more",
                           style: TextStyle(fontSize: 18.0, color: Colors.brown, fontWeight: FontWeight.bold),
@@ -189,7 +186,7 @@ class HomePage extends StatelessWidget {
                         buttonColor: Colors.white,
                         borderColor: Colors.grey, 
                         borderWidth: 1.0,
-                        width: 100.0, 
+                        width: 110.0, 
                         height: 50.0,
                       ),
                       ReusableButton(
@@ -198,7 +195,7 @@ class HomePage extends StatelessWidget {
                         buttonColor: Color.fromARGB(255, 240, 202, 188),
                         borderColor: Color.fromARGB(255, 240, 202, 188), 
                         borderWidth: 1.0,
-                        width: 100.0, 
+                        width: 110.0, 
                         height: 50.0,
                       ),
                       ReusableButton(
@@ -207,7 +204,7 @@ class HomePage extends StatelessWidget {
                         buttonColor: Colors.white, 
                         borderColor: Colors.grey, 
                         borderWidth: 1.0, 
-                        width: 100.0, 
+                        width: 110.0, 
                         height: 50.0,
                       ),
                     ],
@@ -215,6 +212,38 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 20.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child:Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                 Column(
+                    children:[
+                      Text(
+                        "Price",
+                        style: TextStyle(fontSize: 14.0),
+                        ),
+                        SizedBox(height: 5.0),
+                        Text(
+                          "\$4.53",
+                          style: TextStyle(fontSize: 22.0, color: Colors.brown, fontWeight: FontWeight.bold),
+                        ),
+                    ]
+                  ),
+                  ReusableButton(
+                        text: 'Buy Now',
+                        textColor: Colors.white,
+                        buttonColor: Colors.brown, 
+                        borderColor: Colors.brown, 
+                        borderWidth: 1.0, 
+                        width: 230.0, 
+                        height: 60.0,
+                      ),
+                ],
+              )
+            )
           ],
         ),
       ),
