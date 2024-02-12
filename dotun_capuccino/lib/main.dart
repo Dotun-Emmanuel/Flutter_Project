@@ -28,37 +28,47 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Project'),
-      ),
+  elevation: 0, 
+  backgroundColor: Colors.transparent, 
+  title: SafeArea(
+    child: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0), 
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+            children: [
+              Image.asset(
+                'images/arrow-left.jpg',
+                height: 24.0, 
+                width: 24.0, 
+              ),
+              const Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Detail',
+                    style: TextStyle(fontSize: 24.0),
+                  ),
+                ),
+              ),
+              Image.asset(
+                'images/Heart.jpg',
+                height: 24.0, 
+                width: 24.0, 
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+)
+,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Image.asset(
-                    'images/arrow-left.jpg',
-                  ),
-                  const SizedBox(width: 30.0),
-                  const Expanded(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Detail',
-                        style: TextStyle(fontSize: 24.0),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 30.0),
-                  Image.asset(
-                    'images/Heart.jpg',
-                  ),
-                ],
-              ),
-            ),
             const SizedBox(height: 30.0),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,13 +127,27 @@ class HomePage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                         Image.asset(
+                      Container(
+                        decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(10.0), 
+                        color: const Color.fromARGB(255, 248, 246, 246),
+                        ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
                         'images/bean.jpg',
                       ),
-                      const SizedBox(width: 10.0),
-                      Image.asset(
+                    ),
+                    const SizedBox(width: 10.0),
+                      Container(
+                        decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(10.0), 
+                        color: const Color.fromARGB(255, 248, 246, 246),
+                        ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
                         'images/milk.jpg',
                       ),
+                    ),
                     ],
                   ),
                 ],
@@ -214,7 +238,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 20.0),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0,),
               child:Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -235,11 +259,11 @@ class HomePage extends StatelessWidget {
                   ReusableButton(
                         text: 'Buy Now',
                         textColor: Colors.white,
-                        buttonColor: Colors.brown, 
-                        borderColor: Colors.brown, 
+                        buttonColor: Color(0xFFC77C4D), 
+                        borderColor: Color(0xFFC77C4D), 
                         borderWidth: 1.0, 
                         width: 230.0, 
-                        height: 60.0,
+                        height: 65.0,
                       ),
                 ],
               )
@@ -289,7 +313,7 @@ class ReusableButton extends StatelessWidget {
           text,
           style: TextStyle(
             color: textColor,
-            fontSize: 16.0,
+            fontSize: 18.0,
           ), 
         ),
       ),
