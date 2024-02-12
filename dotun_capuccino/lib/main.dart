@@ -169,8 +169,99 @@ class HomePage extends StatelessWidget {
                   ),
             ],
             ),
-            )
+            ),
+            const SizedBox(height: 20.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Size",
+                    style: TextStyle(fontSize: 24.0),
+                  ),
+                  SizedBox(height: 10.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                         ReusableButton(
+                        text: 'S',
+                        textColor: Colors.black,
+                        buttonColor: Colors.white,
+                        borderColor: Colors.grey, 
+                        borderWidth: 1.0,
+                        width: 100.0, 
+                        height: 50.0,
+                      ),
+                      ReusableButton(
+                        text: 'M',
+                        textColor: Colors.brown,
+                        buttonColor: Color.fromARGB(255, 240, 202, 188),
+                        borderColor: Color.fromARGB(255, 240, 202, 188), 
+                        borderWidth: 1.0,
+                        width: 100.0, 
+                        height: 50.0,
+                      ),
+                      ReusableButton(
+                        text: 'L',
+                        textColor: Colors.black,
+                        buttonColor: Colors.white, 
+                        borderColor: Colors.grey, 
+                        borderWidth: 1.0, 
+                        width: 100.0, 
+                        height: 50.0,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class ReusableButton extends StatelessWidget {
+  final String text;
+  final Color textColor;
+  final Color buttonColor;
+  final Color borderColor;
+  final double borderWidth;
+  final double width;
+  final double height;
+  
+
+  const ReusableButton({super.key, 
+    required this.text,
+    required this.textColor,
+    required this.buttonColor, 
+    required this.borderColor, 
+    required this.borderWidth,
+    required this.width,
+    required this.height,
+  });
+
+  @override
+   Widget build(BuildContext context) {
+    return SizedBox(
+      width: width,
+      height: height,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            side: BorderSide(color: borderColor, width: borderWidth), 
+          ),
+        ).copyWith(backgroundColor: MaterialStateProperty.all(buttonColor)),
+        onPressed: null, 
+        child: Text(
+          text,
+          style: TextStyle(
+            color: textColor,
+            fontSize: 16.0,
+          ), 
         ),
       ),
     );
